@@ -14,8 +14,6 @@ targets:
   {{ cookiecutter.project_slug }}Tests:
     platform: iOS
     type: bundle.unit-test
-    configFiles:
-      Debug: configs/{{ cookiecutter.project_slug }}Tests-Debug.xcconfig
     sources:
       - Tests/
     dependencies:

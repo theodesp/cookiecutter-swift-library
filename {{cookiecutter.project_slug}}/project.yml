@@ -5,7 +5,7 @@ configFiles:
 targets:
   {{ cookiecutter.project_slug }}:
     platform: iOS
-    type: Framework
+    type: framework
     sources:
       - Source/
     configFiles:

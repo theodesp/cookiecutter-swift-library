@@ -63,4 +63,4 @@ Then run `swift build` whenever you get prepared.
 
 
 ## LICENCE
-Copyright © 2017 {{ cookiecutter.full_name }} MIT license
+Copyright © 2019 {{ cookiecutter.full_name }} MIT license

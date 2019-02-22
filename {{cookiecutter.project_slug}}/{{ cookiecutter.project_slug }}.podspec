@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.license     = { :type => "MIT" }
   s.authors     = { "{{ cookiecutter.full_name }}" => "{{ cookiecutter.email }}" }
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
   s.swift_version = "4.2"
   s.source   = { :git => "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}.git", :tag => s.version.to_s }
   s.source_files = "Source/**/*.{h,m,swift}"

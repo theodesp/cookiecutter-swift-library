@@ -7,6 +7,7 @@ Pod::Spec.new do |s|
   s.authors     = { "{{ cookiecutter.full_name }}" => "{{ cookiecutter.email }}" }
 
   s.ios.deployment_target = '9.0'
+  s.osx.deployment_target     = '10.9'
   s.swift_version = "4.2"
   s.source   = { :git => "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}.git", :tag => s.version.to_s }
   s.source_files = "Source/**/*.{h,m,swift}"

@@ -1,5 +1,7 @@
 osx_image: xcode9
 language: objective-c
+before_install:
+- gem install cocoapods # Since Travis is not always on latest version
 install:
 - bundle install --jobs=3 --retry=3
 script: bundle exec rake test

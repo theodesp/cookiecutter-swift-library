@@ -1,0 +1,26 @@
+name: {{ cookiecutter.project_slug }}
+configFiles:
+  Debug: configs/Debug.xcconfig
+  Release: configs/Release.xcconfig
+targets:
+  {{ cookiecutter.project_slug }}:
+    platform: iOS
+    type: Framework
+    sources:
+      - Source/
+    configFiles:
+      Debug: configs/{{ cookiecutter.project_slug }}-Debug.xcconfig
+      Release: configs/{{ cookiecutter.project_slug }}-Release.xcconfig
+  {{ cookiecutter.project_slug }}Tests:
+    platform: iOS
+    type: bundle.unit-test
+    configFiles:
+      Debug: configs/{{ cookiecutter.project_slug }}Tests-Debug.xcconfig
+    sources:
+      - Tests/
+    dependencies:
+      - target: {{ cookiecutter.project_slug }}
+    scheme:
+      testTargets:
+        - {{ cookiecutter.project_slug }}Tests
+      gatherCoverageData: true

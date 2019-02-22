@@ -10,5 +10,6 @@ Pod::Spec.new do |s|
   s.osx.deployment_target     = '10.9'
   s.swift_version = "4.2"
   s.source   = { :git => "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}.git", :tag => s.version.to_s }
-  s.source_files = "Source/**/*.{h,m,swift}"
+  s.source_files = "Sources/**/*.{h,m,swift}"
+  s.public_header_files = "Sources/{{ cookiecutter.project_slug }}.h"
 end

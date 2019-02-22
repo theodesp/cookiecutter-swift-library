@@ -6,7 +6,6 @@ let package = Package(
       .library(name: "{{ cookiecutter.project_slug }}", targets: ["{{ cookiecutter.project_slug }}"])
     ],
     targets: [
-      .target(name: "{{ cookiecutter.project_slug }}", dependencies: []),
-      .testTarget(name: "{{ cookiecutter.project_slug }}Tests", dependencies: ["{{ cookiecutter.project_slug }}"]),
+      .target(name: "{{ cookiecutter.project_slug }}", dependencies: [], path: "Sources"),
+      .testTarget(name: "{{ cookiecutter.project_slug }}Tests", dependencies: ["{{ cookiecutter.project_slug }}"], path: "Tests"),
    ])
-   
